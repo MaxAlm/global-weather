@@ -168,6 +168,7 @@ function GetWeather(myLocation) {
 
                 case "Rain":
                 case "Rain, Overcast":
+                case "Snow, Rain, Overcast":
                 case "Rain, Partially cloudy":
                     url = "https://ak.picdn.net/shutterstock/videos/6327374/thumb/1.jpg";
                     break;
