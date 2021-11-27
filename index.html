@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get weather forcasts from all around the world. Fast, easy and free">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body onload="OnLoadInformation()">
+    <div class="fade"></div>
+    
+    <div role="main" class="content">
+        <!--Page search div-->
+        <div role="search" class="search-bar">
+            <br>
+            <input name="search" type="text" placeholder="Country, City, State, Street..."><br><br><br>
+            <button id="search" style="cursor: pointer;" onclick="GetWeather(false)">Search</button><br><br>
+            <button id="search-location" style="cursor: pointer;">Get My Weather</button>
+        </div>
+
+        <h1></h1>
+
+        <!--Forecast-->
+        <div class="forecast">
+            <!--Day 1 (Today)-->
+            <div class="forecast-card" id="day1">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 2-->
+            <div class="forecast-card" id="day2">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 3-->
+            <div class="forecast-card" id="day3">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 4-->
+            <div class="forecast-card" id="day4">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 5-->
+            <div class="forecast-card" id="day5">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 6-->
+            <div class="forecast-card" id="day6">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 7-->
+            <div class="forecast-card" id="day7">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+        </div>
+
+        <!--Vertical forecast-->
+        <div class="vertical-forecast hidden">
+            <!--Day 1 (Today)-->
+            <div class="vertical-forecast-card  hidden" id="day1">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 2-->
+            <div class="vertical-forecast-card  hidden" id="day2">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 3-->
+            <div class="vertical-forecast-card  hidden" id="day3">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 4-->
+            <div class="vertical-forecast-card  hidden" id="day4">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 5-->
+            <div class="vertical-forecast-card  hidden" id="day5">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 6-->
+            <div class="vertical-forecast-card  hidden" id="day6">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+
+            <!--Day 7-->
+            <div class="vertical-forecast-card  hidden" id="day7">
+                <h2>day</h2>
+                <p id="date">September 23</p>
+
+                <p id="max">Max: -10°</p>
+                <h3 id="current-temp">-30°</h3>
+                <p id="min">Min: -40°</p>
+
+                <p id="feels-like">Feels like</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

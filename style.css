@@ -1,0 +1,282 @@
+body { 
+    margin: 0px 0px;
+    
+    background-color: rgb(248, 248, 244);
+    background: url() no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    cursor: default;
+}
+
+/* Set font */
+h1,
+h2,
+h3,
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    position: relative;
+    top: 176px;
+    min-height: 75px;
+
+    text-align: center;
+    font-size: 50px;
+
+    color: white;
+    text-shadow: 1px 1px 10px black, 1px 1px 10px black;
+}
+
+.smaller-title {
+    top: 186px;
+    font-size: 39px;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+/* Used to fade in new background */
+.fade {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(248, 248, 244);
+
+    animation-name: fadeAway;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* Contains all page content */
+.content {
+    position: absolute;
+    /* width: 290px; */
+    width: 100vw;
+    height: 230px;
+    overflow: hidden;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: height 1s;
+}
+
+/* Used when a search has been made */
+.content-extend {
+    width: 100vw;
+    height: 625px;
+}
+
+/* Div for search area */
+.search-bar {
+    position: absolute;
+    width: 200px;
+    height: 155px;
+    padding: 20px 20px;
+    top: 15px;
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px black;
+
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+
+    border-radius: 20px;
+}
+
+/* Forecast */
+.forecast {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    top: 155px;
+    left: 50%;
+    width: 920px;
+    height: 310px;
+    transform: translate(-50%);
+}
+
+.forecast-card {
+    width: 124px;
+    text-align: center;
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px black;
+
+    border-radius: 10px;
+}
+
+/* Vertical forecast */
+.vertical-forecast {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+    top: 155px;
+    left: 50%;
+    width: 650px;
+    height: 675px;
+
+    transform: translate(-50%);
+}
+
+.vertical-forecast-card {
+    height: 90px;
+    text-align: center;
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px black;
+
+    border-radius: 10px;
+}
+
+/* Fix forecast cards */
+#date {
+    position: relative;
+    top: -20px;
+    font-size: 15px;
+}
+
+#current-temp {
+    position: relative;
+    top: -60px;
+}
+
+#min {
+    position: relative;
+    top: -117px;
+}
+
+#feels-like {
+    position: relative;
+    top: -94px;
+}
+
+/* Use to hide elements */
+.hidden {
+    display: none;
+
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+}
+
+/* Animations */
+@keyframes fadeAway {
+    0% { opacity: 100; }
+    100% { opacity: 0; }
+}
+
+/* Toggle vertical forecast */
+@media screen and (max-width: 945px) {
+    .content-extend {
+        height: 990px;
+    }
+    
+    .forecast {
+        display: none;
+    }
+
+    .vertical-forecast {
+        display: flex;
+    }
+
+    h1 {
+        top: 186px;
+        font-size: 39px;
+    }
+
+    h2 {
+        position: relative;
+        width: 100px;
+        top: -4px;
+        left: 20px;
+        text-align: left;
+    }
+
+    #date {
+        width: 130px;
+        top: -27px;
+        left: 20px;
+        text-align: left;
+    }
+
+    #current-temp {
+        top: -190px;
+        left: -20px;
+        text-align: right;
+    }
+    
+    #max {
+        position: relative;
+        width: 40px;
+        top: -84px;
+        left: 50%;
+    }
+
+    #min {
+        position: relative;
+        
+        width: 40px;
+        top: -293px;
+        left: 63%;
+    }
+
+    #feels-like {
+        width: 80px;
+        top: -351px;
+        left: 29%;
+    }
+}
+
+/* Set cards to 100vw */
+@media screen and (max-width: 655px) {
+    .content {
+        overflow: visible;
+    }
+    
+    .vertical-forecast {
+        left: 0px;
+        width: 100vw;
+        transform: none;
+    }
+}
+
+/* Remove max, min and feels like temp */
+@media screen and (max-width: 431px) {
+    #current-temp {
+        top: -132px;
+    }
+    
+    #max {
+        display: none;
+    }
+
+    #min {
+        display: none;
+    }
+
+    #feels-like {
+        display: none;
+    }
+}
+
+/* Set mobile content position */
+@media screen and (max-height: 991px) and (max-width: 945px) {
+    .content {
+        left: 0px;
+        top: 0px;
+        transform: none;
+    }
+}
