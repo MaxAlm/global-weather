@@ -28,12 +28,7 @@ h1 {
     font-size: 50px;
 
     color: white;
-    text-shadow: 1px 1px 10px black, 1px 1px 10px black;
-}
-
-.smaller-title {
-    top: 186px;
-    font-size: 39px;
+    text-shadow: 1px 1px 10px black, 1px 1px 10px black, 1px 1px 10px black;
 }
 
 h3 {
@@ -55,7 +50,6 @@ h3 {
 /* Contains all page content */
 .content {
     position: absolute;
-    /* width: 290px; */
     width: 100vw;
     height: 230px;
     overflow: hidden;
@@ -69,8 +63,16 @@ h3 {
 
 /* Used when a search has been made */
 .content-extend {
+    position: absolute;
     width: 100vw;
     height: 625px;
+    overflow: hidden;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: height 1s;
 }
 
 /* Div for search area */
@@ -115,31 +117,6 @@ h3 {
     border-radius: 10px;
 }
 
-/* Vertical forecast */
-.vertical-forecast {
-    position: relative;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-
-    top: 155px;
-    left: 50%;
-    width: 650px;
-    height: 675px;
-
-    transform: translate(-50%);
-}
-
-.vertical-forecast-card {
-    height: 90px;
-    text-align: center;
-
-    background-color: rgb(255, 255, 255);
-    box-shadow: 5px 5px 15px black;
-
-    border-radius: 10px;
-}
-
 /* Fix forecast cards */
 #date {
     position: relative;
@@ -162,41 +139,36 @@ h3 {
     top: -94px;
 }
 
-/* Use to hide elements */
-.hidden {
-    display: none;
-
-    top: 0px;
-    left: 0px;
-    width: 0px;
-    height: 0px;
-}
-
 /* Animations */
 @keyframes fadeAway {
     0% { opacity: 100; }
     100% { opacity: 0; }
 }
 
-/* Toggle vertical forecast */
+/* Toggle vertical forecast (mobile and tablet view)*/
 @media screen and (max-width: 945px) {
     .content-extend {
         height: 990px;
     }
     
     .forecast {
-        display: none;
+        flex-direction: column;
+        width: 650px;
+        height: 675px;
     }
 
-    .vertical-forecast {
-        display: flex;
+    .forecast-card {
+        width: auto;
+        height: 90px;
     }
 
+    /* Reduce title size */
     h1 {
         top: 186px;
         font-size: 39px;
     }
 
+    /* Update card info to fit horizontal cards */
     h2 {
         position: relative;
         width: 100px;
@@ -242,14 +214,23 @@ h3 {
 
 /* Set cards to 100vw */
 @media screen and (max-width: 655px) {
-    .content {
+    .content-extend {
         overflow: visible;
     }
     
-    .vertical-forecast {
+    .forecast {
         left: 0px;
-        width: 100vw;
+        width: 100vw !important;
         transform: none;
+    }
+}
+
+/* Start auto-sizing title text */
+@media screen and (max-width: 513px) {
+    /* Reduce title size even further */
+    h1 {
+        top: 200px;
+        font-size: 8vw;
     }
 }
 
@@ -274,7 +255,7 @@ h3 {
 
 /* Set mobile content position */
 @media screen and (max-height: 991px) and (max-width: 945px) {
-    .content {
+    .content-extend {
         left: 0px;
         top: 0px;
         transform: none;

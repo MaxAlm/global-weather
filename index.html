@@ -11,13 +11,16 @@
 <body onload="OnLoadInformation()">
     <div class="fade"></div>
     
-    <div role="main" class="content">
+    <div role="main" id="content" class="content">
         <!--Page search div-->
         <div role="search" class="search-bar">
             <br>
-            <input name="search" type="text" placeholder="Country, City, State, Street..."><br><br><br>
-            <button id="search" style="cursor: pointer;" onclick="GetWeather(false)">Search</button><br><br>
-            <button id="search-location" style="cursor: pointer;">Get My Weather</button>
+            <input name="search" type="text" placeholder="Country, City, State, Street...">
+            <br><br><br>
+            <button id="search" style="cursor: pointer;" onclick="GetWeather(false)">
+                Search</button><br><br>
+            <button id="search-location" style="cursor: pointer;" onclick="GetWeather(true)">
+                Get My Weather</button>
         </div>
 
         <h1></h1>
@@ -98,93 +101,6 @@
 
             <!--Day 7-->
             <div class="forecast-card" id="day7">
-                <h2>day</h2>
-                <p id="date">September 23</p>
-
-                <p id="max">Max: -10°</p>
-                <h3 id="current-temp">-30°</h3>
-                <p id="min">Min: -40°</p>
-
-                <p id="feels-like">Feels like</p>
-            </div>
-        </div>
-
-        <!--Vertical forecast-->
-        <div class="vertical-forecast hidden">
-            <!--Day 1 (Today)-->
-            <div class="vertical-forecast-card  hidden" id="day1">
-                <h2>day</h2>
-                <p id="date">September 23</p>
-
-                <p id="max">Max -10°</p>
-                <h3 id="current-temp">-30°</h3>
-                <p id="min">Min -40°</p>
-
-                <p id="feels-like">Feels like</p>
-            </div>
-
-            <!--Day 2-->
-            <div class="vertical-forecast-card  hidden" id="day2">
-                <h2>day</h2>
-                <p id="date">September 23</p>
-
-                <p id="max">Max: -10°</p>
-                <h3 id="current-temp">-30°</h3>
-                <p id="min">Min: -40°</p>
-
-                <p id="feels-like">Feels like</p>
-            </div>
-
-            <!--Day 3-->
-            <div class="vertical-forecast-card  hidden" id="day3">
-                <h2>day</h2>
-                <p id="date">September 23</p>
-
-                <p id="max">Max: -10°</p>
-                <h3 id="current-temp">-30°</h3>
-                <p id="min">Min: -40°</p>
-
-                <p id="feels-like">Feels like</p>
-            </div>
-
-            <!--Day 4-->
-            <div class="vertical-forecast-card  hidden" id="day4">
-                <h2>day</h2>
-                <p id="date">September 23</p>
-
-                <p id="max">Max: -10°</p>
-                <h3 id="current-temp">-30°</h3>
-                <p id="min">Min: -40°</p>
-
-                <p id="feels-like">Feels like</p>
-            </div>
-
-            <!--Day 5-->
-            <div class="vertical-forecast-card  hidden" id="day5">
-                <h2>day</h2>
-                <p id="date">September 23</p>
-
-                <p id="max">Max: -10°</p>
-                <h3 id="current-temp">-30°</h3>
-                <p id="min">Min: -40°</p>
-
-                <p id="feels-like">Feels like</p>
-            </div>
-
-            <!--Day 6-->
-            <div class="vertical-forecast-card  hidden" id="day6">
-                <h2>day</h2>
-                <p id="date">September 23</p>
-
-                <p id="max">Max: -10°</p>
-                <h3 id="current-temp">-30°</h3>
-                <p id="min">Min: -40°</p>
-
-                <p id="feels-like">Feels like</p>
-            </div>
-
-            <!--Day 7-->
-            <div class="vertical-forecast-card  hidden" id="day7">
                 <h2>day</h2>
                 <p id="date">September 23</p>
 
