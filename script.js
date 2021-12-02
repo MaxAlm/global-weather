@@ -197,7 +197,7 @@ function GetWeather(myLocation) {
 
 function GetAPIKey(city) {
     let name = city.toLowerCase().replace(/å/g, "a").replace(/ä/g, "a").replace(/ö/g, "o");
-    return `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${name}?unitGroup=metric&key={key}`;
+    return `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${name}?unitGroup=metric&key={key}`; // Your key here
 }
 
 function OnLoadInformation() {
