@@ -147,7 +147,7 @@ function GetWeather(myLocation) {
 
             switch (obj.days[0].conditions) {
                 case "Overcast":
-                    url = "https://wallpaperbat.com/img/346351-download-free-rain-wallpaper-weather-wallpaper-clouds-rain.jpg";
+                    url = "img/overcast.jpg";
                     break;
 
                 case "Clear":
@@ -155,7 +155,7 @@ function GetWeather(myLocation) {
                     break;
 
                 case "Partially cloudy":
-                    url = "https://cardinalwxservice.com/wp-content/uploads/2019/10/Cloudy.Skies_.jpg";
+                    url = "img/cloudy.jpg";
                     break;
 
                 case "Rain":
@@ -168,7 +168,8 @@ function GetWeather(myLocation) {
                 case "Snow":
                 case "Snow, Clear":
                 case "Snow, Overcast":
-                    url = "https://wallpapercrafter.com/desktop/12909-trees-snow-snowy-winter-sky-elevation-4k.jpg";
+                case "Snow, Partially cloudy":
+                    url = "img/snow.jpg";
                     break;
             
                 default:
